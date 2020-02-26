@@ -9,6 +9,10 @@ RUN pip install flask flask_httpauth flask_simpleldap python-dotenv
 #Pourquoi faire un copie avant d'avoir créé le volume ?
 COPY student_age.py /
 
+#COPY TEST CODE
+COPY run_test.sh /
+
+
 VOLUME ["/data"]
 
 EXPOSE 5000

@@ -1,0 +1,15 @@
+version: '2.1'
+
+networks:
+  test-net:
+
+services:
+  sut:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /run_test.sh
+    volumes:
+      - ./student_age.json:/data/student_age.json
+    networks:
+      - test-net
